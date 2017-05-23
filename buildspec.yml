@@ -3,7 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - sudo apt-get install zip
+      - sudo apt-get update
+      - sudo apt-get install -y zip
   pre_build:
     commands:
       - echo no pre_build step
