@@ -19,7 +19,6 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - cd ..
 artifacts:
   files:
     - ./lambda_deploy.zip
