@@ -13,7 +13,7 @@ phases:
       - mkdir ./bld
       - cp ./app/*.py ./bld/
       - pip install requests -t ./bld/
-      - cd ./zip
+      - cd ./bld
       - zip -r ../lambda_deploy.zip .
   post_build:
     commands:
