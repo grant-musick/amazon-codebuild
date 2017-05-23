@@ -11,7 +11,7 @@ phases:
     commands:
       - echo Build started on `date`
       - mkdir ./bld
-      - cp ./app ./bld
+      - cp ./app/*.py ./bld/
       - pip install requests -t ./bld/
       - cd ./zip
       - zip -r ../lambda_deploy.zip .
