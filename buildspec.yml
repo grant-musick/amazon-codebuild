@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo no install step
+  pre_build:
+    commands:
+      - echo no pre_build step
+  build:
+    commands:
+      - echo Build started on `date`
+      - mkdir ./bld
+      - cp ./app ./bld
+      - pip install requests -t ./bld/
+      - cd ./zip
+      - zip -r ../lambda_deploy.zip .
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - cd ..
+artifacts:
+  files:
+    - ./lambda_deploy.zip
